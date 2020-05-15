@@ -1,2 +1,5 @@
+/* 多模块构建 */
+/* 父模块名称 */
 rootProject.name = 'springcloud'
-
+/* 引入子模块 */
+include 'compute-service', 'compute-service2', 'eureka-server', 'feign', 'ribbon', 'config-server'
