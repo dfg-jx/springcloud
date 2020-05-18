@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.eureka.dfg'
+group = 'com.dfg'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -21,13 +21,14 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-    // 增加config server 
+
+//    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-server
+//    compile group: 'org.springframework.cloud', name: 'spring-cloud-config-server', version: '2.1.4.RELEASE'
+
+    compile ('org.springframework.cloud:spring-cloud-config-server')
+
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
-
-    compile ('org.springframework.cloud:spring-cloud-starter-config')
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.1.7.RELEASE'
 
 }
 
